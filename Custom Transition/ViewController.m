@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (strong, nonatomic) IBOutlet UIButton *tadaButton;
 
 @end
 
@@ -16,12 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    self.title = @"Custom Transition";
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)onTadaButtonPressed:(id)sender {
+    
+    
 }
+
+
+
 
 @end

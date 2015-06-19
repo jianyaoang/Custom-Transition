@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BOg-WA-Ttf">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,101 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edK-wR-8pl">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="czJ-9o-gwe"/>
+                                    <constraint firstAttribute="height" constant="81" id="hoR-MF-Cae"/>
+                                </constraints>
+                                <state key="normal" title="TADA!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="czJ-9o-gwe"/>
+                                        <exclude reference="hoR-MF-Cae"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="czJ-9o-gwe"/>
+                                        <include reference="hoR-MF-Cae"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="onTadaButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bS4-uh-Hmc"/>
+                                    <segue destination="2hB-4P-tUa" kind="show" identifier="Present" id="AvJ-f8-VAP"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="edK-wR-8pl" secondAttribute="centerX" id="9jo-Ay-l5f"/>
+                            <constraint firstAttribute="centerY" secondItem="edK-wR-8pl" secondAttribute="centerY" id="FiZ-p9-hfu"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="edK-wR-8pl"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="9jo-Ay-l5f"/>
+                                <exclude reference="FiZ-p9-hfu"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="edK-wR-8pl"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="9jo-Ay-l5f"/>
+                                <include reference="FiZ-p9-hfu"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="CZ1-A3-l7s"/>
+                    <connections>
+                        <outlet property="tadaButton" destination="edK-wR-8pl" id="rEK-67-XEo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="955.5" y="-361.5"/>
+        </scene>
+        <!--Modal View Controller-->
+        <scene sceneID="gRT-5V-Prc">
+            <objects>
+                <viewController id="2hB-4P-tUa" customClass="ModalViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nep-al-I4q"/>
+                        <viewControllerLayoutGuide type="bottom" id="7G1-GZ-aLZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C04-UZ-hX3">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gXy-kn-t1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1659" y="-361.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SJ8-eD-W4I">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BOg-WA-Ttf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="D6D-s3-cMI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="O7t-Se-14f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVH-id-csy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216" y="-361.5"/>
         </scene>
     </scenes>
 </document>

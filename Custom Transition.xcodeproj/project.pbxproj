@@ -15,6 +15,10 @@
 		3BA980B11B33F9E400314942 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BA980B01B33F9E400314942 /* Images.xcassets */; };
 		3BA980B41B33F9E400314942 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BA980B21B33F9E400314942 /* LaunchScreen.xib */; };
 		3BA980C01B33F9E400314942 /* Custom_TransitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA980BF1B33F9E400314942 /* Custom_TransitionTests.m */; };
+		3BA980CB1B33FB5400314942 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA980CA1B33FB5400314942 /* ModalViewController.m */; };
+		3BA980CE1B33FBE600314942 /* PresentModalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA980CD1B33FBE600314942 /* PresentModalVC.m */; };
+		3BA980D21B33FC0500314942 /* DismissModalVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA980D11B33FC0500314942 /* DismissModalVC.m */; };
+		C4FEF9033288785996AEA634 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6B47700EA201F902BE01FBA /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D0BC262E7A05EBA8B66484F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		3BA9809D1B33F9E400314942 /* Custom Transition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Custom Transition.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA980A11B33F9E400314942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BA980A21B33F9E400314942 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,6 +47,14 @@
 		3BA980B91B33F9E400314942 /* Custom TransitionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Custom TransitionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA980BE1B33F9E400314942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BA980BF1B33F9E400314942 /* Custom_TransitionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Custom_TransitionTests.m; sourceTree = "<group>"; };
+		3BA980C91B33FB5400314942 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		3BA980CA1B33FB5400314942 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		3BA980CC1B33FBE600314942 /* PresentModalVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentModalVC.h; sourceTree = "<group>"; };
+		3BA980CD1B33FBE600314942 /* PresentModalVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentModalVC.m; sourceTree = "<group>"; };
+		3BA980D01B33FC0500314942 /* DismissModalVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissModalVC.h; sourceTree = "<group>"; };
+		3BA980D11B33FC0500314942 /* DismissModalVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissModalVC.m; sourceTree = "<group>"; };
+		86E0BC7D1188DDC8BC3FC21D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C6B47700EA201F902BE01FBA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4FEF9033288785996AEA634 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,12 +76,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		302BE45032C5B260B727943F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6B47700EA201F902BE01FBA /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3BA980941B33F9E400314942 = {
 			isa = PBXGroup;
 			children = (
 				3BA9809F1B33F9E400314942 /* Custom Transition */,
 				3BA980BC1B33F9E400314942 /* Custom TransitionTests */,
 				3BA9809E1B33F9E400314942 /* Products */,
+				B6FFFCDAB84C50061BC1944D /* Pods */,
+				302BE45032C5B260B727943F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +109,9 @@
 			children = (
 				3BA980A41B33F9E400314942 /* AppDelegate.h */,
 				3BA980A51B33F9E400314942 /* AppDelegate.m */,
+				3BA980CF1B33FBEE00314942 /* Animation */,
+				3BA980C91B33FB5400314942 /* ModalViewController.h */,
+				3BA980CA1B33FB5400314942 /* ModalViewController.m */,
 				3BA980AA1B33F9E400314942 /* ViewController.h */,
 				3BA980AB1B33F9E400314942 /* ViewController.m */,
 				3BA980AD1B33F9E400314942 /* Main.storyboard */,
@@ -122,6 +149,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3BA980CF1B33FBEE00314942 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				3BA980CC1B33FBE600314942 /* PresentModalVC.h */,
+				3BA980CD1B33FBE600314942 /* PresentModalVC.m */,
+				3BA980D01B33FC0500314942 /* DismissModalVC.h */,
+				3BA980D11B33FC0500314942 /* DismissModalVC.m */,
+			);
+			name = Animation;
+			sourceTree = "<group>";
+		};
+		B6FFFCDAB84C50061BC1944D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D0BC262E7A05EBA8B66484F /* Pods.debug.xcconfig */,
+				86E0BC7D1188DDC8BC3FC21D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -129,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BA980C31B33F9E400314942 /* Build configuration list for PBXNativeTarget "Custom Transition" */;
 			buildPhases = (
+				BB2D6F7B5152CAF2D350C7B6 /* Check Pods Manifest.lock */,
 				3BA980991B33F9E400314942 /* Sources */,
 				3BA9809A1B33F9E400314942 /* Frameworks */,
 				3BA9809B1B33F9E400314942 /* Resources */,
+				9541C10E2726F73CFF80C53E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -217,6 +266,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9541C10E2726F73CFF80C53E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB2D6F7B5152CAF2D350C7B6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3BA980991B33F9E400314942 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -224,6 +306,9 @@
 			files = (
 				3BA980A61B33F9E400314942 /* AppDelegate.m in Sources */,
 				3BA980A91B33F9E400314942 /* Custom_Transition.xcdatamodeld in Sources */,
+				3BA980D21B33FC0500314942 /* DismissModalVC.m in Sources */,
+				3BA980CE1B33FBE600314942 /* PresentModalVC.m in Sources */,
+				3BA980CB1B33FB5400314942 /* ModalViewController.m in Sources */,
 				3BA980AC1B33F9E400314942 /* ViewController.m in Sources */,
 				3BA980A31B33F9E400314942 /* main.m in Sources */,
 			);
@@ -349,6 +434,7 @@
 		};
 		3BA980C41B33F9E400314942 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D0BC262E7A05EBA8B66484F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Custom Transition/Info.plist";
@@ -359,6 +445,7 @@
 		};
 		3BA980C51B33F9E400314942 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86E0BC7D1188DDC8BC3FC21D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Custom Transition/Info.plist";
@@ -420,6 +507,7 @@
 				3BA980C51B33F9E400314942 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3BA980C61B33F9E400314942 /* Build configuration list for PBXNativeTarget "Custom TransitionTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +516,7 @@
 				3BA980C81B33F9E400314942 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
