@@ -9,6 +9,7 @@
 #import "DismissModalVC.h"
 #import "ModalViewController.h"
 #import "ViewController.h"
+#import <POP.h>
 
 @implementation DismissModalVC
 
@@ -19,6 +20,20 @@
 
 -(void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
     
+    UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    toViewController.view.tintAdjustmentMode = UIViewTintAdjustmentModeNormal;
+    toViewController.view.userInteractionEnabled = YES;
+    
+    UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    
+    POPBasicAnimation *movingModalVCToOffScreen = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+    movingModalVCToOffScreen.name = @"movingModalVCToOffScreen";
+    movingModalVCToOffScreen.toValue = @(-fromViewController.view.layer.position.y);
+    [movingModalVCToOffScreen setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
+        [transitionContext completeTransition:YES];
+    }];
+    
+    [fromViewController.view.layer pop_addAnimation:movingModalVCToOffScreen forKey:@"movingModalVCToOffScreen"];
     
 }
 
